@@ -38,6 +38,7 @@ public class TinkerManager {
     private static final String TAG = "Tinker.TinkerManager";
 
     private static ApplicationLike                applicationLike;
+    private static TinkerUncaughtExceptionHandler uncaughtExceptionHandler;
     private static boolean isInstalled = false;
 
     public static void setTinkerApplicationLike(ApplicationLike appLike) {
@@ -46,6 +47,14 @@ public class TinkerManager {
 
     public static ApplicationLike getTinkerApplicationLike() {
         return applicationLike;
+    }
+
+
+    public static void initFastCrashProtect() {
+        if (uncaughtExceptionHandler == null) {
+            uncaughtExceptionHandler = new TinkerUncaughtExceptionHandler();
+            Thread.setDefaultUncaughtExceptionHandler(uncaughtExceptionHandler);
+        }
     }
 
 

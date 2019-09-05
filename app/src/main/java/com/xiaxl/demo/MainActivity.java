@@ -39,8 +39,8 @@ public class MainActivity extends Activity {
             }
         });
         //
-//        mTextView = (TextView) findViewById(R.id.textView);
-//        mTextView.setText("patch patch patch");
+        mTextView = (TextView) findViewById(R.id.textView);
+        mTextView.setText("patch patch patch");
 
     }
 

@@ -40,6 +40,7 @@ public class MyApplicationLike extends DefaultApplicationLike {
         // ################ tinker #########################
         // ################ tinker #########################
         // ################ tinker #########################
+        TinkerManager.initFastCrashProtect();
         TinkerManager.setTinkerApplicationLike(this);
         //should set before tinker is installed
         TinkerManager.setUpgradeRetryEnable(true);
