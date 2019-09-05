@@ -9,7 +9,7 @@
         android:id="@+id/button01"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="load patch" />
+        android:text="sdcard读写权限" />
     <Button
         android:id="@+id/button"
         android:layout_width="match_parent"
