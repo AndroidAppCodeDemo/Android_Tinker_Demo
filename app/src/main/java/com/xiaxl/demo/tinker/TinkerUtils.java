@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.xiaxl.demo;
+package com.xiaxl.demo.tinker;
 
 import android.content.BroadcastReceiver;
 import android.content.Context;

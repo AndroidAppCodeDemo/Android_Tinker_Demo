@@ -12,6 +12,7 @@ import com.tencent.tinker.anno.DefaultLifeCycle;
 import com.tencent.tinker.entry.DefaultApplicationLike;
 import com.tencent.tinker.lib.tinker.Tinker;
 import com.tencent.tinker.loader.shareutil.ShareConstants;
+import com.xiaxl.demo.tinker.TinkerManager;
 
 @DefaultLifeCycle(application = "com.xiaxl.demo.MyApplication",
         flags = ShareConstants.TINKER_ENABLE_ALL,

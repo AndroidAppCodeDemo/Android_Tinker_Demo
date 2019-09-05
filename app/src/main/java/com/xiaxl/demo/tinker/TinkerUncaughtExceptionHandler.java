@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.xiaxl.demo;
+package com.xiaxl.demo.tinker;
 
 import android.content.Context;
 import android.content.SharedPreferences;
@@ -90,7 +90,7 @@ public class TinkerUncaughtExceptionHandler implements Thread.UncaughtExceptionH
                 }
 
                 if (isCausedByXposed) {
-                    //SampleTinkerReport.onXposedCrash();
+                    SampleTinkerReport.onXposedCrash();
                     TinkerLog.e(TAG, "have xposed: just clean tinker");
                     //kill all other process to ensure that all process's code is the same.
                     ShareTinkerInternals.killAllOtherProcess(applicationLike.getApplication());
@@ -128,7 +128,7 @@ public class TinkerUncaughtExceptionHandler implements Thread.UncaughtExceptionH
             SharedPreferences sp = applicationLike.getApplication().getSharedPreferences(ShareConstants.TINKER_SHARE_PREFERENCE_CONFIG, Context.MODE_MULTI_PROCESS);
             int fastCrashCount = sp.getInt(currentVersion, 0) + 1;
             if (fastCrashCount >= MAX_CRASH_COUNT) {
-                //SampleTinkerReport.onFastCrashProtect();
+                SampleTinkerReport.onFastCrashProtect();
                 TinkerApplicationHelper.cleanPatch(applicationLike);
                 TinkerLog.e(TAG, "tinker has fast crash more than %d, we just clean patch!", fastCrashCount);
                 return true;
